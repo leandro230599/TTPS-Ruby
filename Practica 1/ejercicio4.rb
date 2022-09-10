@@ -1,0 +1,2 @@
+# El ejercicio solicita responder que devuelve 'TTPS Ruby'.object_id == 'TTPS Ruby'.object_id y porque lo hace asi, la respuesta es que devuelve falso porque el string cambia el valor de su id en cada instancia, si fuera simbol seria lo mismo
+puts 'TTPS Ruby'.object_id == 'TTPS Ruby'.object_id
