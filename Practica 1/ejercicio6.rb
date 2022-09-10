@@ -1,3 +1,5 @@
+# Debo verificar si hay forma de hacer la linea 14, los dos gsub, en uno solo
+
 def tiempo_en_palabras(tiempo)
     word = {
             0..10 => "Son las #{tiempo.hour} en punto",
@@ -9,7 +11,6 @@ def tiempo_en_palabras(tiempo)
            }
     strWord = word.select {|minutos| minutos === tiempo.min }.values.first.to_s
     puts strWord.downcase.include? "son las 1"
-    #puts strWord.downcase.gsub(/son las 1 /, 'es la 1 ')
     puts strWord.gsub(/son las 1 /, 'es la 1 ').gsub(/Son las 1 /, 'Es la 1 ')
 end
 
