@@ -3,6 +3,6 @@
 puts "Hola que tal".reverse
 puts "Estoy eliminando los espacios en blanco con GSUB".gsub(/\s/,'')
 puts "Estoy eliminando los espacios en blanco con DELETE".delete(' ')
-puts "abcd".bytes # Imprime cada valor del array en una nueva linea
-p "abcd".bytes # Imprime cada valor del array en la misma linea
+puts "abcd".bytes # Imprime cada valor del array en una nueva linea, porque invoca al to_s
+p "abcd".bytes # Imprime cada valor del array en la misma linea, porque imprime el estado interno de los objetos
 puts "Reemplazando algunos valores y probando imprimiendo".gsub(/[aA+]/, "4").gsub(/[eE+]/, "3").gsub(/[iI+]/, "1").gsub(/[oO+]/, "0").gsub(/[uU+]/, "6")
