@@ -1,0 +1,3 @@
+[:upcase, :downcase, :capitalize, :swapcase].map do |meth| puts "TTPS Ruby".send(meth) end
+
+# Lo que hace es iterar por cada elemento del arreglo, y eso aplicandolo en el bloque que aparece con la sentencia del puts TTPS Ruby, a ese string le manda le mensaje del parametro con el simbolo que tiene un significa de lo que debe hacer, en upcase pasa todo a mayuscula, en downcase pasa todo a minuscula, en capitalize pone la primera letra en mayuscula y nada mas, en swapcase voltea todo de mayuscula a minuscula y viceversa
