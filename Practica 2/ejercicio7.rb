@@ -1,4 +1,12 @@
+module ToString
+    def to_s
+      "#{self.email} (#{self.role.class})"
+    end
+end
+
 class Usuario
+    
+    include ToString
     attr_accessor :usuario, :clave, :email, :role
     def initialize (usuario, clave, email, role)
         self.usuario = usuario
@@ -19,12 +27,6 @@ class Usuario
         self.role.puede_borrar?(doc)
     end
 end
-
-#module ToString
-#    def to_s
-#      "#{self.email} (#{self.rol.class})"
-#    end
-#end
 
 class Documento
     attr_accessor :creador, :contenido, :publico, :borrado
@@ -137,3 +139,8 @@ puts "Usuario 4"
 puts doc5.puede_ser_visto_por?(micaela)
 puts doc5.puede_ser_modificado_por?(micaela)
 puts doc5.puede_ser_borrado_por?(micaela)
+puts "Info del eje 7"
+puts leandro.to_s
+puts delicia.to_s
+puts hector.to_s
+puts micaela.to_s
